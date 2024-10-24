@@ -9,22 +9,22 @@ var v1 = require('./routes/v1');
 require('./global_functions.js');
 app.use(express.json());
 
-models.sequelize
-  .authenticate()
-  .then(() => {
-    models.schemaCreate.then(() => {
-      models.sequelize.sync().then(async () => {
+// models.sequelize
+//   .authenticate()
+//   .then(() => {
+//     models.schemaCreate.then(() => {
+//       models.sequelize.sync().then(async () => {
 
-      })
-    })
-    console.log(CONFIG.db_name)
-  });
+//       })
+//     })
+//     console.log(CONFIG.db_name)
+//   });
 
 setupWebSocket(app);
 
 
 // Start the server
-const PORT = '0000';
+const PORT = '3000';
 const server = app.listen('0.0.0.0', () => {
   console.log(`Server is listening on http://localhost:${PORT}`);
 });
