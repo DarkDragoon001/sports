@@ -1,4 +1,5 @@
 const umpireDetails = require('../model').umpireDetails;
+const candidateDetails = require('../model').candidate;
 const jwt = require('jsonwebtoken');
 const uuid = require('uuid');
 
@@ -21,7 +22,8 @@ const registerPlayer = async function (body) {
   body['uniqueId'] = uuid.v4();
   body['created'] = new Date();
   body['modified'] = new Date();
-  [err, register] = await to(umpireDetails.create(body));
+  console.log('body data player',body);
+  [err, register] = await to(candidateDetails.create(body));
   if (err) {
     console.log('error service', err);
     return TE({ error: 'Failed to register umpire' });
