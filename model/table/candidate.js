@@ -10,13 +10,13 @@ module.exports = (db, Sequelize) => {
                allowNull: false,
                required: true
           },
-          gender:{
+          gender: {
                type: Sequelize.STRING
           },
-          dateOfBirth:{
+          dateOfBirth: {
                type: Sequelize.DATE
           },
-          district:{
+          district: {
                type: Sequelize.STRING
           },
           uniqueId: {
