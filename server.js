@@ -24,7 +24,7 @@ setupWebSocket(app);
 
 
 // Start the server
-const PORT = 8080;
+const PORT = '0000';
 const server = app.listen(PORT, () => {
   console.log(`Server is listening on http://localhost:${PORT}`);
 });
